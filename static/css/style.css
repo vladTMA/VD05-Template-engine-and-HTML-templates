@@ -1,0 +1,67 @@
+/* style.css */
+.snowflake {
+  position: fixed;   /* фиксируем относительно окна */
+  top: -10px;        /* начинаем сверху */
+  z-index: 9999;     /* поверх всего */
+  pointer-events: none;
+  user-select: none;
+  animation: fall linear forwards;
+}
+
+.snowflake span {
+display: inline-block;
+animation: sway ease-in-out infinite, fadeout linear forwards;
+}
+
+/* Падение */
+@keyframes fall {
+  to {
+    top: 100vh; /* падение вниз */
+  }
+}
+
+/* Покачивание */
+@keyframes sway {
+ 0% { transform: translateX(0); }
+ 25% { transform: translateX(15px); }
+ 50% { transform: translateX(-15px); }
+ 75% { transform: translateX(10px); }
+ 100% { transform: translateX(0); }
+}
+
+/* Таяние */
+@keyframes fadeout {
+  to {
+    opacity: 0;
+  }
+}
+
+/* Эффект наведения для карточек */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* лёгкий подъём */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* тень */
+}
+
+/* Эффект наведения для картинки внутри карточки */
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05); /* лёгкое увеличение картинки */
+}
+
+/* Эффект наведения для ссылок в футере */
+footer a {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer a:hover {
+  color: #0d6efd !important; /* меняем цвет на синий Bootstrap */
+  text-shadow: 0 0 5px rgba(13, 110, 253, 0.7); /* лёгкое свечение */
+}
+

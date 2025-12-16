@@ -1,0 +1,63 @@
+<!-- index1.html -->
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<h1>Галерея</h1>
+
+    <!-- Карточки -->
+<div class="row mb-5">
+  <!-- Карточка 1 -->
+  <div class="col-sm-12 col-md-4 mb-3 d-flex">
+    <div class="card h-100">
+      <img src="{{ url_for('static', filename='image/Дарт Вейдер.jfif') }}" class="card-img-top" alt="Дарт Вейдер">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">Дарт Вейдер</h5>
+        <p class="card-text">(англ. Darth Vader), известный под своим настоящим именем как Энакин Скайуокер.</p>
+        <div class="mt-auto">
+          <a href="#" class="btn btn-primary"><strong><em>Дата рождения:</em></strong> 41.9.3037 ДБЯ</a>
+          <a href="#" class="btn btn-primary"><strong><em>Email:</em></strong> vader@empire.sw</a>
+          <a href="#" class="btn btn-primary"><strong><em>Город:</em></strong> Мустафар</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Карточка 2 -->
+  <div class="col-sm-12 col-md-4 mb-3 d-flex">
+    <div class="card h-100">
+      <img src="{{ url_for('static', filename='image/Люк Скайуокер.jfif') }}" class="card-img-top" alt="Люк Скайуокер">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">Люк Скайуокер</h5>
+        <p class="card-text">Один из главных персонажей вселенной «Звёздные войны», джедай, сын Падме Амидалы и Энакина Скайуокера.<br>Брат-близнец Леи Органы Соло.</p>
+        <div class="mt-auto">
+          <a href="#" class="btn btn-primary"><strong><em>Дата рождения:</em></strong> 41.9.3059 ДБЯ</a>
+          <a href="#" class="btn btn-primary"><strong><em>Email:</em></strong> luke@jedi.order</a>
+          <a href="#" class="btn btn-primary"><strong><em>Город:</em></strong> Анкорхед</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Карточка 3 -->
+  <div class="col-sm-12 col-md-4 mb-3 d-flex">
+    <div class="card h-100">
+      <img src="{{ url_for('static', filename='image/Лея_Органа_Соло.jfif') }}" class="card-img-top" alt="Лея Органа Соло">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">Лея Органа Соло</h5>
+        <p class="card-text">(англ. Leia Organa Solo) — персонаж вселенной «Звёздные войны», один из главных персонажей IV—IX эпизодов.<br>Сестра-близнец Люка Скайуокера.</p>
+        <div class="mt-auto">
+          <a href="#" class="btn btn-primary"><strong><em>Дата рождения:</em></strong> 41.9.2059 ДБЯ</a>
+          <a href="#" class="btn btn-primary"><strong><em>Email:</em></strong> leia@resistance.sw</a>
+          <a href="#" class="btn btn-primary"><strong><em>Город:</em></strong> Алдераан</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<p>Здесь показываем карточки из папки static/image.</p>
+
+{% endblock %}

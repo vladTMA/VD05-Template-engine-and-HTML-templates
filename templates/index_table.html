@@ -1,0 +1,21 @@
+<!-- index_table.html -->
+{% extends "base.html" %}
+
+{% block title %}Таблица{% endblock %}
+
+{% block content %}
+<h1>Пример таблицы</h1>
+<table class="table table-bordered table-striped">
+  <thead class="table-success">
+    <tr>
+      <th>Имя</th>
+      <th>Возраст</th>
+      <th>Город</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Иван</td><td>25</td><td>Москва</td></tr>
+    <tr><td>Анна</td><td>30</td><td>СПб</td></tr>
+  </tbody>
+</table>
+{% endblock %}
